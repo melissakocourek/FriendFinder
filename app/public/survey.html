@@ -9,25 +9,50 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/bootstrap-slider.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|News+Cycle|Nunito+Sans|Quicksand" rel="stylesheet">
     <style>
+
+        .h3 .h2{
+
+            font-family: 'News Cycle', sans-serif;
+        }
+        h3 {
+            font-size: 1.2em;
+            font-weight: 100;
+
+        }
+        h2{
+            font-size: 1.4em;
+            font-weight: 100;
+        }
+        h4{
+            font-size: 0.9em;
+        }
+        .LinkTexts {
+            color: #493829;
+
+        }
         .slider-handle{
-            background: #2c3e50;
+            background: #816C5B;
         }
         .slider-track, .slider-selection{
-            background: #b4bcc2;
+            background: #D7D5CD;
         }
+        
+
     </style>
     <title>Survey</title>
 </head>
 <body>
     <div class="container">
-        <h1>Survey Questions</h1>
+        <h1 style="text-align:center">Survey Questions</h1>
         <hr>
         <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3>Name and Photo</h3>
+            <div class="panel-heading" style="background-color: #9CAC88">
+                <h2>Name and Photo</h2>
             </div>
-            <div class="panel-body" style="background-color: #fdfdff">
+            <div class="panel-body" style="background-color: #D5D5D5">
                 <div class="form-group">
                         <label for="name">Your Name:</label>
                         <input type="text" class="form-control" id="name" name="name">
@@ -39,91 +64,91 @@
             </div>
         </div>
         <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3>Your Personality</h3>
+                <div class="panel-heading" style="background-color: #9CAC88">
+                    <h2>Your Personality</h2>
                 </div>
-                <div class="panel-body" style="background-color: #fdfdff">
+                <div class="panel-body" style="background-color: #D5D5D5">
                     <div class="panel panel-primary" id="p1">
                         <div class="panel-body">
                             
-                            <h2>Question 1: You're interested in adventure and trying new things even if they may be unusual.</h2>
+                            <h3><strong>Question 1:</strong><br style="line-height: 1.6"> You're interested in adventure and trying new things even if they may be unusual.</h3>
                             <br>
                             <p>
                             <input id="q1" data-slider-id='q1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                             </p>
                             <p>
-                            <h3 style="text-align: center" id="q1Result">Slide to Answer</h3>
+                            <h4 style="text-align: center" id="q1Result">Slide to Answer</h4>
                             </p>
                         </div>
                     </div>
 
                     <div class="panel panel-primary" id="p2">
                         <div class="panel-body">
-                            <h2>Question 2: You like to have an orderly and harmonious environment</h2>
+                            <h3><strong>Question 2: </strong><br style="line-height: 1.6">You like to have an orderly and harmonious environment</h3>
                             <br>
                             <p>
                             <input id="q2" data-slider-id='q2Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                             </p>
                             <p>
-                            <h3 style="text-align: center" id="q2Result">Slide to Answer</h3>
+                            <h4 style="text-align: center" id="q2Result">Slide to Answer</h4>
                             </p>
                         </div>
                     </div>
 
                     <div class="panel panel-primary" id="p3">
                         <div class="panel-body">
-                            <h2>Question 3: You thrive on order and schedules</h2>
+                            <h3><strong>Question 3: </strong><br style="line-height: 1.6"> You thrive on order and schedules</h3>
                             <br>
                             <p>
                             <input id="q3" data-slider-id='q3Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                             </p>
                             <p>
-                            <h3 style="text-align: center" id="q3Result">Slide to Answer</h3>
+                            <h4 style="text-align: center" id="q3Result">Slide to Answer</h4>
                             </p>
                         </div>
                     </div>
 
                     <div class="panel panel-primary" id="p4">
                         <div class="panel-body">
-                            <h2>Question 4: You draw your energy from others </h2>
+                            <h3><strong>Question 4: </strong><br style="line-height: 1.6"> You draw your energy from others </h3>
                             <br>
                             <p>
                             <input id="q4" data-slider-id='q4Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                             </p>
                             <p>
-                            <h3 style="text-align: center" id="q4Result">Slide to Answer</h3>
+                            <h4 style="text-align: center" id="q4Result">Slide to Answer</h4>
                             </p>
                         </div>
                     </div>
 
                     <div class="panel panel-primary" id="p5">
                         <div class="panel-body">
-                            <h2>Question 5: You are willing to compromise your own personal interests for those of others.</h2>
+                            <h3><strong>Question 5: </strong><br style="line-height: 1.6"> You are willing to compromise your own personal interests for those of others.</h3>
                             <p>
                             <input id="q5" data-slider-id='q5Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                             </p>
                             <p>
-                            <h3 style="text-align: center" id="q5Result">Slide to Answer</h3>
+                            <h4 style="text-align: center" id="q5Result">Slide to Answer</h4>
                             </p>
                         </div>
                     </div>
 
                 <div class="panel panel-primary" id="p6">
                     <div class="panel-body">
-                        <h2>Question 6: You make most of your decisions through logic and reason rather than emotion.</h2>
+                        <h3><strong>Question 6: </strong><br style="line-height: 1.6">You make most of your decisions through logic and reason rather than emotion.</h3>
                         <br>
                         <p>
                         <input id="q6" data-slider-id='q6Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                         </p>
                         <p>
-                        <h3 style="text-align: center" id="q6Result">Slide to Answer</h3>
+                        <h4 style="text-align: center" id="q6Result">Slide to Answer</h4>
                         </p>
                     </div>
                 </div>
 
                 <div class="panel panel-primary" id="p7">
                     <div class="panel-body">
-                        <h2>Question 7: You are highly conscientiousness and will do whatever it takes to achieve top marks for anything you take on.</h2>
+                        <h3><strong>Question 7: </strong><br style="line-height: 1.6">You are highly conscientiousness and will do whatever it takes to achieve top marks for anything you take on.</h3>
                         <br>
                         <p>
                         <input id="q7" data-slider-id='q7Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
@@ -136,39 +161,39 @@
 
                 <div class="panel panel-primary" id="p8">
                     <div class="panel-body">
-                        <h2>Question 8: You are thorough and remember specifics about certain individuals because you value loyalty.</h2>
+                        <h3><strong>Question 8: </strong><br style="line-height: 1.6">You are thorough and remember specifics about certain individuals because you value loyalty.</h3>
                         <br>
                         <p>
                         <input id="q8" data-slider-id='q8Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                         </p>
                         <p>
-                        <h3 style="text-align: center" id="q8Result">Slide to Answer</h3>
+                        <h4 style="text-align: center" id="q8Result">Slide to Answer</h4>
                         </p>
                     </div>
                 </div>
                     
                 <div class="panel panel-primary" id="p9">
                     <div class="panel-body">
-                        <h2>Question 9: You are afraid of conflict.</h2>
+                        <h3><strong>Question 9: </strong><br style="line-height: 1.6"> You are afraid of conflict.</h3>
                         <br>
                         <p>
                         <input id="q9" data-slider-id='q9Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%" data-slider-tooltip="hide"/>
                         </p>
                         <p>
-                        <h3 style="text-align: center" id="q9Result">Slide to Answer</h3>
+                        <h4 style="text-align: center" id="q9Result">Slide to Answer</h4>
                         </p>
                     </div>
                 </div>
 
                 <div class="panel panel-primary" id="p10">
                     <div class="panel-body">
-                        <h2>Question 10: You would rather go to a museum for a first date rather than dinner at a 5 star restaurant </h2>
+                        <h3><strong>Question 10: </strong><br style="line-height: 1.6"> You would rather go to a museum for a first date rather than dinner at a 5 star restaurant </h3>
                         <br>
                         <p>
                         <input id="q10" data-slider-id='q10Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
                         </p>
                         <p>
-                        <h3 style="text-align: center" id="q10Result">Slide to Answer</h3>
+                        <h4 style="text-align: center" id="q10Result">Slide to Answer</h4>
                         </p>
                     </div>
                 </div>
@@ -213,15 +238,15 @@
             <div class="container">
                 <hr>
                 <p>
-                    <a href="/">
+                    <a href="/" class="LinkTexts">
                     Home 
                     </a>
                     |
-                    <a href="/api/friends">
+                    <a href="/api/friends" class="LinkTexts">
                         Friends List API
                     </a>
                      | 
-                    <a href="https://github.com/melissakocourek/FriendFinder" target="_blank">
+                    <a href="https://github.com/melissakocourek/FriendFinder" target="_blank" class="LinkTexts">
                         Github Repo
                     </a>
                 </p>
@@ -274,29 +299,29 @@ function sliderResult (value, callback){
     var txtColor;
     switch(value){
         case 1:
-            color = "red"
+            color = "#613318"
             text = "Strongly Disagree"
-            txtColor = "#ffffff"
+            txtColor = "White"
             break;
         case 2:
-            color = "OrangeRed"
+            color = "#816C5B"
             text = "Somewhat Disagree"
-            txtColor = "#2c3e50"
+            txtColor = "White"
             break;
         case 3:
-            color = "#b4bcc2"
+            color = "#DBD7CC"
             text = "Neutral"
-            txtColor = "#2c3e50"
+            txtColor = "White"
             break;
         case 4:
-            color = "LightGreen"
+            color = "#9f9976"
             text = "Somewhat Agree"
-            txtColor = "#2c3e50"
+            txtColor = "White"
             break;
         case 5:
-            color = "green"
+            color = "#696e4d"
             text = "Strongly Agree"
-            txtColor = "#ffffff"
+            txtColor = "White"
             break;
         default:
             return;
