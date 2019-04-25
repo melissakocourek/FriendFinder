@@ -47,7 +47,55 @@ var friends = [
 			"5",
 			"1"		
 		]
-	}
+    },
+    {
+		name: "Cersei Lannister",
+		photo: "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/syfywire_cover_media/2018/09/game-of-thrones-cersei-queen.jpg?timestamp=1536758302",
+		score: [
+			"5",
+			"5",
+			"2",
+			"3",
+			"1",
+			"5",
+			"4",
+			"1",
+			"1",
+			"2"		
+		]
+    },
+    {
+        name: "Sansa Stark ",
+		photo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/SophieTurnerasSansaStark.jpg/220px-SophieTurnerasSansaStark.jpg ",
+		score: [
+			"3",
+			"4",
+			"3",
+			"3",
+			"3",
+			"3",
+			"4",
+			"2",
+			"2",
+			"4"		
+		]
+    },
+    {
+        name: "Tyrion Lannister ",
+		photo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Tyrion_Lannister-Peter_Dinklage.jpg/220px-Tyrion_Lannister-Peter_Dinklage.jpg ",
+		score: [
+			"4",
+			"5",
+			"4",
+			"3",
+			"2",
+			"4",
+			"1",
+			"2",
+			"5"
+					
+		]
+	},
 ];
 
 module.exports = friends;
