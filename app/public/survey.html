@@ -1,298 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>FriendFinder</title>
-
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.css" />
+    <style>
+        .slider-handle{
+            background: #2c3e50;
+        }
+        .slider-track, .slider-selection{
+            background: #b4bcc2;
+        }
+    </style>
+    <title>Survey</title>
 </head>
-
-<style>
-    img {
-       height: 50%;
-       width: 50%;
-    }
-</style>
-
 <body>
-
     <div class="container">
-
-        <h2>Survey Questions</h2>
+        <h1>Survey Questions</h1>
         <hr>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3>Name and Photo</h3>
+            </div>
+            <div class="panel-body" style="background-color: #fdfdff">
+                <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group" id="pic-group">
+                    <label for="pic">Link To a Picture of You:</label>
+                    <input type="url" class="form-control" id="pic">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Your Personality</h3>
+                </div>
+                <div class="panel-body" style="background-color: #fdfdff">
+                    <div class="panel panel-primary" id="p1">
+                        <div class="panel-body">
+                            
+                            <h2>Question 1: You find it easy to stay relaxed even under pressure</h2>
+                            <br>
+                            <p>
+                            <input id="q1" data-slider-id='q1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                            </p>
+                            <p>
+                            <h3 style="text-align: center" id="q1Result">Slide to Answer</h3>
+                            </p>
+                        </div>
+                    </div>
 
-        <h3>
-            <strong>About You</strong>
-        </h3>
-        <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required>
+                    <div class="panel panel-primary" id="p2">
+                        <div class="panel-body">
+                            <h2>Question 2: You do not usually initiate conversations</h2>
+                            <br>
+                            <p>
+                            <input id="q2" data-slider-id='q2Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                            </p>
+                            <p>
+                            <h3 style="text-align: center" id="q2Result">Slide to Answer</h3>
+                            </p>
+                        </div>
+                    </div>
 
-        <h4>Link to Photo Image (Required)</h4>
-        <input type="text" id="photo" class="form-control" required>
+                    <div class="panel panel-primary" id="p3">
+                        <div class="panel-body">
+                            <h2>Question 3: You are naturally curious</h2>
+                            <br>
+                            <p>
+                            <input id="q3" data-slider-id='q3Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                            </p>
+                            <p>
+                            <h3 style="text-align: center" id="q3Result">Slide to Answer</h3>
+                            </p>
+                        </div>
+                    </div>
 
-        <hr>
+                    <div class="panel panel-primary" id="p4">
+                        <div class="panel-body">
+                            <h2>Question 4: You are highly organized and tidy</h2>
+                            <br>
+                            <p>
+                            <input id="q4" data-slider-id='q4Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                            </p>
+                            <p>
+                            <h3 style="text-align: center" id="q4Result">Slide to Answer</h3>
+                            </p>
+                        </div>
+                    </div>
 
-        <h3>
-            <strong>Question 1</strong>
-        </h3>
-        <h4>You take a keen interest in politics and positioning for power</h4>
-        <select class="chosen-select" id="q1">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
+                    <div class="panel panel-primary" id="p5">
+                        <div class="panel-body">
+                            <h2>Question 5: Dogs are better than cats</h2>
+                            <p>
+                            <input id="q5" data-slider-id='q5Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                            </p>
+                            <p>
+                            <h3 style="text-align: center" id="q5Result">Slide to Answer</h3>
+                            </p>
+                        </div>
+                    </div>
 
-        <h3>
-            <strong>Question 2</strong>
-        </h3>
-        <h4>You rely more on your wit than your fighting powers.</h4>
-        <select class="chosen-select" id="q2">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
+                <div class="panel panel-primary" id="p6">
+                    <div class="panel-body">
+                        <h2>Question 6: It is often difficult for you to relate to other people's feelings</h2>
+                        <br>
+                        <p>
+                        <input id="q6" data-slider-id='q6Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                        </p>
+                        <p>
+                        <h3 style="text-align: center" id="q6Result">Slide to Answer</h3>
+                        </p>
+                    </div>
+                </div>
 
+                <div class="panel panel-primary" id="p7">
+                    <div class="panel-body">
+                        <h2>Question 7: You value logic more than emotion</h2>
+                        <br>
+                        <p>
+                        <input id="q7" data-slider-id='q7Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                        </p>
+                        <p>
+                        <h3 style="text-align: center" id="q7Result">Slide to Answer</h3>
+                        </p>
+                    </div>
+                </div>
 
-        <h3>
-            <strong>Question 3</strong>
-        </h3>
-        <h4>You can keep calm and collected even in the face of your demise.</h4>
-        <select class="chosen-select" id="q3">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
+                <div class="panel panel-primary" id="p8">
+                    <div class="panel-body">
+                        <h2>Question 8: An interesting book or a video game is often better than a social event</h2>
+                        <br>
+                        <p>
+                        <input id="q8" data-slider-id='q8Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                        </p>
+                        <p>
+                        <h3 style="text-align: center" id="q8Result">Slide to Answer</h3>
+                        </p>
+                    </div>
+                </div>
+                    
+                <div class="panel panel-primary" id="p9">
+                    <div class="panel-body">
+                        <h2>Question 9: You value spontaneity over sticking to set plans</h2>
+                        <br>
+                        <p>
+                        <input id="q9" data-slider-id='q9Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%" data-slider-tooltip="hide"/>
+                        </p>
+                        <p>
+                        <h3 style="text-align: center" id="q9Result">Slide to Answer</h3>
+                        </p>
+                    </div>
+                </div>
 
+                <div class="panel panel-primary" id="p10">
+                    <div class="panel-body">
+                        <h2>Question 10: This is an A+ Project</h2>
+                        <br>
+                        <p>
+                        <input id="q10" data-slider-id='q10Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step=".01" data-slider-value="3" style="width: 100%"/>
+                        </p>
+                        <p>
+                        <h3 style="text-align: center" id="q10Result">Slide to Answer</h3>
+                        </p>
+                    </div>
+                </div>
 
-        <h3>
-            <strong>Question 4</strong>
-        </h3>
-        <h4>You meticulously plan every move you make and leave nothing to chance.</h4>
-        <select class="chosen-select" id="q4">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3>
-            <strong>Question 5</strong>
-        </h3>
-        <h4>Your word is your bond and you would never break an oath.</h4>
-        <select class="chosen-select" id="q5">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3>
-            <strong>Question 6</strong>
-        </h3>
-        <h4>You let your feelings be known no matter whose sensibilities may be offended.</h4>
-        <select class="chosen-select" id="q6">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3>
-            <strong>Question 7</strong>
-        </h3>
-        <h4>Family ties are the ties that bind and you would do anything for family.</h4>
-        <select class="chosen-select" id="q7">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3>
-            <strong>Question 8</strong>
-        </h3>
-        <h4>You look to religion as your guiding compass.</h4>
-        <select class="chosen-select" id="q8">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3>
-            <strong>Question 9</strong>
-        </h3>
-        <h4>You prefer the wide open country to crowded cities. </h4>
-        <select class="chosen-select" id="q9">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3>
-            <strong>Question 10</strong>
-        </h3>
-        <h4>You prefer a lively party over a quite night in</h4>
-        <select class="chosen-select" id="q10">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <br>
-        <br>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
-            Submit</button>
-
-        <hr>
-        <footer class="footer">
+                <button id='submit' class="btn btn-primary btn-block">Submit</button>
+                <button id='reset' class="btn btn-primary btn-block">Reset</button>
+                    <h3 id="message" style="text-align: center"></h3>
+            </div>
+        </div>
+        
+<!--Results Modal-->
+        <div id="resultModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Your Best Match</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-5">
+                                <img class="img-responsive" id="match-pic" src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909__340.png" alt="Your Best Friend">
+                        </div>
+                        <div class="col-xs-7">
+                            <center>
+                                <h2 id="match-name"></h2>
+                                <h3 id="match-stats"></h3>
+                            </center>
+                        </div>
+                    </div>
+                  
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+        <footer>
             <div class="container">
+                <hr>
                 <p>
-                    <a href="/api/friends">API Friends List</a> |
-                    <a href="https://github.com/MelissaKocourek/FriendFinder" target="_blank">GitHub Repo</a>
+                    <a href="/">
+                    Home 
+                    </a>
+                    |
+                    <a href="/api/friends">
+                        Friends List API
+                    </a>
+                     | 
+                    <a href="https://github.com/melissakocourek/FriendFinder" target="_blank">
+                        Github Repo
+                    </a>
                 </p>
             </div>
         </footer>
+</body>
 
-    </div>
-
-    <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title">
-                        <strong>Best Match</strong>
-                    </h2>
-                </div>
-                <div class="modal-body">
-                    <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        // Chosen CSS
-        var config = {
-            ".chosen-select": {},
-            ".chosen-select-deselect": {
-                allow_single_deselect: true
-            },
-            ".chosen-select-no-single": {
-                disable_search_threshold: 10
-            },
-            ".chosen-select-no-results": {
-                no_results_text: "Oops, nothing found!"
-            },
-            ".chosen-select-width": {
-                width: "95%"
+<script>
+    const questionIds = []
+    // initiate sliders
+    for(let i = 1; i < 11; i++){
+        let questionId = `#q${i}`
+        questionIds.push(questionId)
+        $(questionId).slider().on('change', function(e){
+            let resultDiv = $(questionId + 'Result')
+            let value = roundVal(e.value.newValue)
+            $(this).addClass('answered')
+            sliderResult(value, function(color, text, txtColor){
+                $(`#p${i}`).css('border-color', color)
+                resultDiv.css({
+                    'background-color': color,
+                    'color': txtColor
+                })
+                .html(text)
+            })
+        })
+    }
+    $('#reset').hide()
+    $('#reset').on('click', function(){
+       $('body').scrollTop(0)
+       location.reload(true)
+    })
+    // change picture textbox if it's not a url
+    $('#pic').on('change', function(){
+        var url = $(this).val()
+        var icon = $('<span class="glyphicon form-control-feedback">')
+        if(testUrl(url)){
+            $('#pic-group').addClass('has-success has-feedback')
+            $('#pic-group').removeClass('has-error has-feedback')
+        } else {
+            $('#pic-group').addClass('has-error has-feedback')
+            $('#pic-group').removeClass('has-success has-feedback')
+        }
+    })
+    
+// returns colors/message based on slider value
+function sliderResult (value, callback){
+    var color;
+    var text;
+    var txtColor;
+    switch(value){
+        case 1:
+            color = "red"
+            text = "Strongly Disagree"
+            txtColor = "#ffffff"
+            break;
+        case 2:
+            color = "OrangeRed"
+            text = "Somewhat Disagree"
+            txtColor = "#2c3e50"
+            break;
+        case 3:
+            color = "#b4bcc2"
+            text = "Neutral"
+            txtColor = "#2c3e50"
+            break;
+        case 4:
+            color = "LightGreen"
+            text = "Somewhat Agree"
+            txtColor = "#2c3e50"
+            break;
+        case 5:
+            color = "green"
+            text = "Strongly Agree"
+            txtColor = "#ffffff"
+            break;
+        default:
+            return;
+    }
+    callback(color, text, txtColor)
+}
+// rounds the slider value so that the slider is divided evenly among the 5 answer categories
+// ie 5 even sections = 4 value change points = each section should be .8 wide
+function roundVal(value){
+    if(value < 1.8){
+        value = 1
+    } else if(value < 2.6){
+        value = 2
+    } else if(value < 3.4){
+        value = 3
+    } else if(value < 4.2){
+        value = 4
+    } else {
+        value = 5
+    }
+    return value;
+}
+// submit button event handler
+$('#submit').on('click', function(){
+    if($(this).hasClass("disabled")){
+        return;
+    }
+    event.preventDefault();
+    const picUrl = $('#pic').val().trim()
+    // see if anything was unanswered
+    const unanswered = testAnswers();
+    // vaidate the picture url
+    const isValidUrl = testUrl(picUrl);
+    // if any of the validation fails, update #message
+    if(unanswered.length > 0){
+        $('#message').html("You didn't answer: " + unanswered.join(", "))
+    } else if(!isValidUrl){
+        $('#message').html(picUrl + " is not a valid URL.<br>Please enter a valid URL")
+    } else {
+        $('#message').empty()
+        // get the user answers
+        let scores = questionIds.map(qId => {
+            return $(qId).slider('getValue')
+        })
+        
+        let answers = {
+            name: $('#name').val().trim(),
+            photo: picUrl,
+            scores: scores
+        }
+    
+        // send the answers to the server
+        $.post('/api/friends', answers, function(result){
+            console.log(result)
+            // validate that image url can load and if it fails, load the default image
+            testImage(result[0].photo, function(isValid){
+                if(isValid){
+                    $('#match-pic').attr('src', result[0].photo) 
+                } else {
+                    $('#match-pic').attr('src', 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909__340.png') 
+                }
+            // calculate the % match: ((max difference - match difference) / max difference) * 100
+            var percent = Math.round(((40 - result[1]) / 40) * 100)
+                // update the modal content and show it
+                $('#match-name').html(result[0].name)
+                $('#match-stats').html(percent + "% Match<br><hr><br>Scroll through the questions to compare answers!")
+                $('#resultModal').modal('show')
+                // updates the question panels with user/match's answers for comparison
+                for(var i = 0; i < result[0].scores.length; i++){
+                    var questionNum = i + 1
+                    var qPanel = $('#p' + questionNum)
+                    var resultDiv = $('#q' + questionNum + 'Result')
+                    var userAnswer = answers.scores[i]
+                    var compare = ("<center><h3>Your Answer: " + userAnswer + "  |  \
+                                    "  + result[0].name + "'s Answer: " + result[0].scores[i] + "</h3></center>")
+                    resultDiv.css(
+                        {
+                        'background-color': '#2c3e50', 'color': '#ffffff'
+                        }
+                    ).html(compare)
+                    qPanel.css('border-color', '#2c3e50')
+                    $('#q' + questionNum).slider("disable")
+                    $('#submit').addClass('disabled')
+                    $('#reset').show()
+                }
+            })
+        })
+    }
+})
+// helper function to test the pic url
+function testUrl(url){
+    var isValid = false
+    var regex = /((https?\:\/\/)|(www\.))(\S+)(\w{2,4})(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/g;
+    if(url.match(regex)){
+        isValid = true;
+    }
+    return isValid
+}
+// helper function to make sure everything is filled out
+function testAnswers(){
+    var unanswered = []
+    if($('#name').val() === ""){
+        unanswered.push("Your Name")
+    }
+    if($('#pic').val() === ""){
+        unanswered.push("Your Photo")
+    }
+    for(var i = 1; i < 11; i++){
+        var question = $('#q' + i)
+        if(!(question.hasClass('answered'))){
+            unanswered.push("Question #" + i)
+        }
+    }
+    return unanswered;
+}
+// helper function to validate the image
+function testImage(imgUrl, callback) {
+        var timedOut = false;
+        var timer;
+        var img = new Image();
+        img.onerror =  function () {
+            if(!timedOut){
+                clearTimeout(timer);
+                callback(false);
             }
         };
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
-        // Capture the form inputs
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            // Form validation
-            function validateForm() {
-                var isValid = true;
-                $(".form-control").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
-                $(".chosen-select").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
-                return isValid;
+        img.onabort = function () {
+            if(!timedOut){
+                clearTimeout(timer);
+                callback(false);
             }
-            // If all required fields are filled
-            if (validateForm()) {
-                // Create an object for the user"s data
-                var userData = {
-                    name: $("#name").val(),
-                    photo: $("#photo").val(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
-                };
-                // AJAX post the data to the friends API.
-                $.post("/api/friends", userData, function (data) {
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
-                    // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
-                });
-            } else {
-                alert("Please fill out all fields before submitting!");
+        };
+        img.onload = function () {
+            if(!timedOut){
+                clearTimeout(timer);
+                callback(true);
             }
-        });
-    </script>
-
-</body>
+        };
+        img.src = imgUrl
+        timer = setTimeout(function () {
+                timedOut = true;
+                callback(false)
+        }, 5000);
+}
+</script>
 </html>

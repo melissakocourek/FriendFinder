@@ -1,53 +1,38 @@
-var friends = [
-	
-	{
-		name: "Daenerys Targaryen",
-		photo: "https://i.pinimg.com/564x/ac/2d/5a/ac2d5a15e357552fc107325250eaa9fd--photo-games-game-thrones.jpg",
-		scores: [
-			"5",
-			"3",
-			"5",
-			"4",
-			"5",
-			"5",
-			"2",
-			"2",
-			"1",
-			"3"
-		]
-	},
-	{
-		name: "Arya Stark",
-		photo: "https://vignette.wikia.nocookie.net/gameofthrones/images/b/b1/Arya_Season_8.jpg/revision/latest?cb=20190206213617",
-		scores: [
-			"2",
-			"2",
-			"5",
-			"3",
-			"4",
-			"4",
-			"4",
-			"1",
-			"4",
-			"1"
-		]
-	},
-	{
-		name: "Brian Eastman",
-		photo: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-		score: [
-			"3",
-			"1",
-			"4",
-			"1",
-			"4",
-			"3",
-			"5",
-			"1",
-			"5",
-			"4"		
-		]
-	}
-];
+var Friends = [
+    {
+    name: "Ross Geller",
+    photo: 'https://img.buzzfeed.com/buzzfeed-static/static/2017-06/1/6/campaign_images/buzzfeed-prod-fastlane-01/how-popular-are-your-opinions-about-ross-geller-2-14231-1496313900-8_dblbig.jpg',
+    scores: [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+    ]
+    },
 
-module.exports = friends;
+    {
+        name: "Monica Geller",
+        photo: "https://data.whicdn.com/images/157621550/large.jpg",
+        scores: [
+        3.9,
+        4.35,
+        5,
+        2,
+        5,
+        4.22,
+        5,
+        3.45,
+        2.97,
+        5
+        ]
+        }
+
+]
+
+module.exports = Friends
