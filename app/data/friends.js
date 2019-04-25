@@ -33,22 +33,21 @@ var friends = [
 		]
 	},
 	{
-		name: "Jon Snow",
-		photo: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/01/14/jon-snow.jpeg",
+		name: "Brian Eastman",
+		photo: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
 		score: [
-			"2",
+			"3",
 			"1",
 			"4",
 			"1",
-			"5",
+			"4",
 			"3",
 			"5",
-			"2",
+			"1",
 			"5",
-			"1"		
+			"4"		
 		]
-    },
-    
+	}
 ];
 
 module.exports = friends;
